@@ -1,0 +1,11 @@
+
+<div class="container">
+
+    <div *ngFor="let people of peoples" class="item-list" >
+        <img  [src]="people.imgUrl" alt="teste" >
+        <div>
+            <p class="info-name">{{people.name}}</p>
+            <p>{{people.description}}</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+
+
+.container{
+    border: 2px solid gray;
+    padding: .5rem;
+}
+
+.container .item-list{
+    display: flex;
+    gap:1.5rem;
+    background-color: rgb(204, 204, 204);
+    margin: 0.5rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 1rem;
+
+}
+.container .item-list:hover{
+    cursor: pointer;
+    background-color: gray;
+
+}
+.container .item-list img{
+    border-radius: 50%;
+     width: 50px;
+     height:50px;
+
+}
+
+.container .item-list .info-name{
+    font-weight: bold;
+
+}

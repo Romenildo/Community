@@ -1,0 +1,17 @@
+
+
+<div class="conteiner">
+
+    <h1 (click)="pessoa = !pessoa">Pessoas</h1>
+
+    <p>filtro</p>
+
+
+    <div *ngIf="!pessoa">
+        <app-options-list></app-options-list>
+    </div>
+    <div *ngIf="pessoa">
+        <app-people-list></app-people-list>
+    </div>
+    
+</div>
