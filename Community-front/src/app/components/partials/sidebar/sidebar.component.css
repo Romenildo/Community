@@ -10,18 +10,33 @@
   align-items: center;
 }
 
-.container input{
-  margin:.8rem;
-  padding: 0.4rem .9rem;
+.container .filter {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
-  font-size:.9em;
-  border-radius:.5rem;
+  padding: 0.1rem;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.container .filter input {
+  padding: 0.4rem 0.9rem;
+  width: 100%;
+  font-size: 0.9em;
+  border-radius: 0.5rem;
   border: none;
 }
-
-.container .option{
-  width: 100%;
+.container .filter button {
+  width: 35px;
+  border-radius: 50%;
+  border: none;
+  background-color: gray;
+}
+.container .filter button:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 
-
-
+.container .option {
+  width: 100%;
+}

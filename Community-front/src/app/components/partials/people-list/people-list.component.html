@@ -1,7 +1,7 @@
 
 <div class="container">
 
-    <div *ngFor="let people of peoples" class="item-list" (click)="clicked(people)" >
+    <div *ngFor="let people of peoples" class="item-list" (click)="clicked(people)" routerLink="/">
         <img  [src]="people.imgUrl" alt="teste" >
         <div>
             <p class="info-name">{{people.name}}</p>
