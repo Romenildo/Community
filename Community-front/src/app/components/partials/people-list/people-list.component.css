@@ -1,17 +1,16 @@
 
 
 .container{
-    border: 2px solid gray;
     padding: .5rem;
+    width: 100%;
 }
 
 .container .item-list{
     display: flex;
     gap:1.5rem;
-    background-color: rgb(204, 204, 204);
-    margin: 0.5rem;
-    padding: 0.3rem 0.5rem;
-    border-radius: 1rem;
+    background-color: rgb(190, 190, 190);
+    padding: 0.5rem;
+    margin: .2rem 0;
 
 }
 .container .item-list:hover{

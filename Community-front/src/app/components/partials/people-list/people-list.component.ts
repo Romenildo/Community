@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-people-list',
@@ -6,18 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./people-list.component.css']
 })
 export class PeopleListComponent {
-
-
-  peoples = [
-    {
-      name:"Kafka",
-      imgUrl:"https://wotpack.ru/wp-content/uploads/2023/05/1-18.jpg",
-      description:"teste"
-    },
-    {
-      name:"Seele",
-      imgUrl:"https://criticalhits.com.br/wp-content/uploads/2023/07/honkai-star-rail-seele.jpg",
-      description:"teste"
-    }
-  ]
+  @Input() peoples:any[] = []
+  @Output() onClicked: EventEmitter<any> = new EventEmitter()
+  
+  clicked(people:any){
+    this.onClicked.emit(people)
+  }
 }

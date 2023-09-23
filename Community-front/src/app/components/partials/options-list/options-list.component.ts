@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-options-list',
@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class OptionsListComponent {
 
+  @Output() backToPeople: EventEmitter<any> = new EventEmitter()
+
+  onClicked(){
+    //aciona o evento ao chamar o onCick e envia um emiter para o pai
+    this.backToPeople.emit()
+  }
 }

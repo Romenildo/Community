@@ -1,19 +1,32 @@
 .container{
-    border: 2px solid gray;
-    padding: .5rem;
+
     list-style: none;
-    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
     
 }
 
 .container li{
-    margin: 0.8rem;
-    padding: 0.5rem 0.2rem;
+    padding: 0.6rem 0.2rem;
     text-align: center;
     border-radius: 1rem;
+    font-size: 1.1em;
     background-color: rgb(204, 204, 204);
+    width: 100%;
 }
 .container li:hover{
     cursor: pointer;
     background-color: gray;
+}
+
+.container li:last-child{
+    background-color: rgb(167, 167, 167);
+    font-size: 1.3rem;
+    width: 20%;
+}
+.container li:last-child:hover{
+    opacity: 0.8;
 }
