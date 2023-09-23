@@ -6,7 +6,7 @@ import { RegisterComponent } from './components/partials/register/register.compo
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'chat/:id', component: ChatsComponent},
+  {path: 'chat/:type/:id', component: ChatsComponent},
   {path: 'register', component: RegisterComponent},
 ];
 

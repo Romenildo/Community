@@ -1,1 +1,25 @@
-<p>register works!</p>
+
+<div class="container">
+    <h1>Cadastrar nova Pessoa</h1>
+
+    <form (ngSubmit)="submit()" [formGroup]="userForm" #formDir="ngForm">
+		<input type="hidden" formControlName="id" />
+    <div>
+        <div *ngIf="name.invalid && formDir.submitted" class="error">
+            <p *ngIf="name.errors?.['required']">*O Nome é obrigatorio</p>
+        </div>
+        <input type="text" placeholder="Nome" required formControlName="name">
+        
+    </div>
+
+    <div>
+        <div *ngIf="description.invalid && formDir.submitted" class="error">
+            <p *ngIf="description.errors?.['required']">*A descrição é obrigatorio</p>
+        </div>
+        <input type="description" placeholder="Descrição" required formControlName="description">
+        
+    </div>
+
+    <input type="submit" value="{{ btnText }}">
+</form>
+</div>
