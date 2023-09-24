@@ -1,21 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { PeopleService } from 'src/app/services/people.service';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css']
 })
-export class SidebarComponent {
+export class SidebarComponent  implements OnInit{
+  
+  constructor(private ps:PeopleService){}
 
   title='Pessoas'
   pessoa = true
   currentPeople = {}
+  peoples = [
+  ]
+
+  ngOnInit(): void {
+     this.ps.getAllPeople().subscribe(data=>{
+      this.peoples = data
+    })
+  }
 
   changeSide = (event:any)=>{
     this.pessoa = !this.pessoa
     this.title = event.name
     this.currentPeople = event
-    console.log(event)
   }
 
   resetSide= () =>{
@@ -23,26 +33,5 @@ export class SidebarComponent {
     this.title='Pessoas'
   }
 
-  peoples = [
-    {
-      id:"1",
-      name:"Kafka",
-      imgUrl:"https://wotpack.ru/wp-content/uploads/2023/05/1-18.jpg",
-      description:"teste",
-      chats:{
-        prim:[{data:"21/02/2023", message:"teste"}],
-        sec:[{data:"21/02/2023", message:"teste"}],
-        ter:[{data:"21/02/2023", message:"teste"}],
-        qua:[{data:"21/02/2023", message:"teste"}],
-        qui:[{data:"21/02/2023", message:"teste"}],
-        sex:[{data:"21/02/2023", message:"teste"}]
-      }
-    },
-    {
-      id:"2",
-      name:"Seele",
-      imgUrl:"https://criticalhits.com.br/wp-content/uploads/2023/07/honkai-star-rail-seele.jpg",
-      description:"teste"
-    }
-  ]
+  
 }

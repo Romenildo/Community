@@ -16,7 +16,12 @@
         <div *ngIf="description.invalid && formDir.submitted" class="error">
             <p *ngIf="description.errors?.['required']">*A descrição é obrigatorio</p>
         </div>
-        <input type="description" placeholder="Descrição" required formControlName="description">
+        <input type="text" placeholder="Descrição" required formControlName="description">
+        
+    </div>
+    <div>
+
+        <input type="text" placeholder="Url da Imagem" required formControlName="imgUrl">
         
     </div>
 

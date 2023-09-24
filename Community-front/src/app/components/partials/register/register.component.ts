@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { PeopleService } from 'src/app/services/people.service';
 
 @Component({
   selector: 'app-register',
@@ -13,7 +14,7 @@ export class RegisterComponent {
 
   userForm!: FormGroup
 
-  constructor(){}
+  constructor( private ps:PeopleService){}
 
   ngOnInit(): void {
 
@@ -21,6 +22,7 @@ export class RegisterComponent {
       id: new FormControl(''),
       name: new FormControl('', [Validators.required]),
       description: new FormControl('', [Validators.required]),
+      imgUrl: new FormControl('', []),
     })
   }
 
@@ -30,12 +32,16 @@ export class RegisterComponent {
   get description(){
     return this.userForm.get('description')!
   }
+  get imgUrl(){
+    return this.userForm.get('imgUrl')!
+  }
 
   submit(){
     if(this.userForm.invalid){
       return
     }
-    console.log(this.userForm.value)
-     this.onSubmit.emit(this.userForm.value)
+    this.ps.add(this.userForm.value).subscribe()
+
+    this.onSubmit.emit(this.userForm.value)
   }
 }
