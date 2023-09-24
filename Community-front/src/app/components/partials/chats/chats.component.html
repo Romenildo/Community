@@ -1,11 +1,18 @@
 
 
-<div>
-    <h1>titles</h1>
-    <div *ngFor="let chat of chats">
-        <div>
+<div style="width: 60vw;">
+    <div class="header" style="background-color: gray; width: 100%;">
+        <h1>Mensagens</h1>
+    </div >
+
+    <div style="background-color: gainsboro; height:88vh;display: flex; flex-direction: column; gap: 2rem; align-items: flex-end; padding-top: .5rem;">
+        <div  *ngFor="let chat of chats" class="messages" style=" background-color: blanchedalmond; border-radius: 1rem; margin: .5rem; padding: .5rem;" >
             <p>{{chat.message}}</p>
             <p>{{chat.data}}</p>
         </div>
+    </div>
+    <div class="add" style="display: flex;width: 100%; padding: 0 .5rem;">
+        <input type="text" style="width: 96%; font-size: 1.2rem;padding: .5rem;">
+        <button>Adicionar</button>
     </div>
 </div>

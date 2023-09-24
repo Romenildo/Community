@@ -12,6 +12,6 @@ export class ChatsComponent {
     {message:"teste de mensagem", data:"20/07/2000"},
     {message:"teste de mensagem", data:"20/07/2000"},
     {message:"teste de mensagem", data:"20/07/2000"},
-    {message:"teste de mensagem", data:"20/07/2000"},
+    {message:"teste de mensagem maior que o esperado para ver se quebra a linha da mensagem", data:"20/07/2000"},
   ]
 }

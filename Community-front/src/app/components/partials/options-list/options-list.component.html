@@ -1,9 +1,9 @@
 <ul class="container">
-    <li>Assuntos</li>
-    <li>Assuntos pendentes</li>
-    <li>Eventos</li>
-    <li>Historias</li>
-    <li>Gostos</li>
-    <li>Informações</li>
-    <li (click)="onClicked()">&lt;</li>
+    <li routerLinkActive="active" routerLink="/chat/subject/{{current.id}}">Assuntos</li>
+    <li routerLinkActive="active" routerLink="/chat/important/{{current.id}}">Assuntos pendentes</li>
+    <li routerLinkActive="active" routerLink="/chat/events/{{current.id}}">Eventos</li>
+    <li routerLinkActive="active" routerLink="/chat/history/{{current.id}}">Historias</li>
+    <li routerLinkActive="active" routerLink="/chat/likes/{{current.id}}">Gostos</li>
+    <li routerLinkActive="active" routerLink="/chat/info/{{current.id}}">Informações</li>
+    <li (click)="onClicked()" routerLink="/">&lt;</li>
 </ul>

@@ -11,7 +11,7 @@
     
     
     <div *ngIf="!pessoa" class="option">
-        <app-options-list (backToPeople)="resetSide()"></app-options-list>
+        <app-options-list (backToPeople)="resetSide()" [current]="currentPeople"></app-options-list>
     </div>
     <div *ngIf="pessoa" class="option">
         <app-people-list [peoples]="peoples" (onClicked)="changeSide($event)"></app-people-list>

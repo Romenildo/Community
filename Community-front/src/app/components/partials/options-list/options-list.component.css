@@ -30,3 +30,7 @@
 .container li:last-child:hover{
     opacity: 0.8;
 }
+
+.active{
+    background-color: gray!important;
+}

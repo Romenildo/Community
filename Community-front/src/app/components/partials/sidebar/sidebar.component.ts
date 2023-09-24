@@ -9,10 +9,12 @@ export class SidebarComponent {
 
   title='Pessoas'
   pessoa = true
+  currentPeople = {}
 
   changeSide = (event:any)=>{
     this.pessoa = !this.pessoa
     this.title = event.name
+    this.currentPeople = event
     console.log(event)
   }
 
@@ -26,7 +28,15 @@ export class SidebarComponent {
       id:"1",
       name:"Kafka",
       imgUrl:"https://wotpack.ru/wp-content/uploads/2023/05/1-18.jpg",
-      description:"teste"
+      description:"teste",
+      chats:{
+        prim:[{data:"21/02/2023", message:"teste"}],
+        sec:[{data:"21/02/2023", message:"teste"}],
+        ter:[{data:"21/02/2023", message:"teste"}],
+        qua:[{data:"21/02/2023", message:"teste"}],
+        qui:[{data:"21/02/2023", message:"teste"}],
+        sex:[{data:"21/02/2023", message:"teste"}]
+      }
     },
     {
       id:"2",
